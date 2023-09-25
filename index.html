@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #a3a7a8;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  </style>
+  <body>
+    <main class="flex flex-col h-screen overflow-hidden">
+      <header class="bg-white">
+        <div
+          id="header-container"
+          class="flex items-center justify-between px-3 py-2"
+        >
+          <div id="header-left" class="flex items-center gap-x-32 flex-1">
+            <div class="flex items-center gap-2">
+              <img
+                class="w-14 h-14"
+                src="./assets/images/NFT-Logo.png"
+                alt=""
+              />
+              <h1 class="text-xl font-bold">COC NFT</h1>
+            </div>
+            <div class="flex flex-1 items-center relative" id="input_container">
+              <div class="absolute ml-2 pointer-events-none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-search"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <input
+                class="p-1 pl-8 border-slate-100 border-2 bg-slate-100 rounded-full focus:outline-none focus:border-[#7c71ff]"
+                placeholder="Search Here..."
+                type="text"
+              />
+            </div>
+          </div>
+          <div id="header-right" class="flex items-center gap-5">
+            <div>
+              <h1
+                class="bg-gradient-to-r from-indigo-500 to-purple-500 p-1 px-3 rounded-full text-white font-medium"
+              >
+                1493ETH
+              </h1>
+            </div>
+            <div
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-slate-100"
+            >
+              👑
+            </div>
+            <div
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-slate-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-bell"
+              >
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <div class="flex items-center gap-2 cursor-pointer">
+              <div>
+                <img
+                  class="rounded-full object-cover h-9 w-9"
+                  src="./assets/images/image3.jpeg"
+                  alt="Profile-picture"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Sultanhand Ann</h4>
+                <p class="text-[12px]">sultanhand@gmail.com</p>
+              </div>
+              <div>
+                <svg
+                  style="width: 15px; padding-right: 0px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        id="Main-section"
+        class="flex-1 grid grid-cols-[0.9fr_3fr_1.1fr] gap-x-5 bg-slate-100 overflow-hidden"
+      >
+        <nav
+          id="nav-scroll"
+          class="bg-white flex flex-col overflow-y-auto h-full flex-shrink-0 pt-2"
+        >
+          <div class="p-2 flex flex-col gap-2 flex-1">
+            <div>
+              <h2 class="text-xl text-gray-500 font-medium">Member Menu</h2>
+              <div id="nav-scroll" class="my-2 max-h-[150px] overflow-auto">
+                <div class="my-3">
+                  <a
+                    class="flex items-center gap-2 p-2 rounded-full text-lg font-medium hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    href=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="feather feather-grid"
+                    >
+                      <path
+                        d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"
+                      />
+                    </svg>
+                    <span>Dashboard</span>
+                  </a>
+                </div>
+                <div class="my-3">
+                  <a
+                    class="flex items-center gap-2 p-2 rounded-full text-lg font-medium hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    href=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72L4.318 3.44A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72m-13.5 8.65h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .415.336.75.75.75z"
+                      />
+                    </svg>
+                    <span>NFT Store</span>
+                  </a>
+                </div>
+                <div class="my-3">
+                  <a
+                    class="flex items-center p-2 gap-2 rounded-full text-lg font-medium hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    href=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 18 9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0-5.94-2.28m5.94 2.28-2.28 5.941"
+                      />
+                    </svg>
+                    <span>Active Stock</span>
+                  </a>
+                </div>
+                <div class="my-3">
+                  <a
+                    class="flex items-center gap-2 p-2 rounded-full text-lg font-medium hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    href=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                    <span>Favourite</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-xl text-gray-500 font-medium">Earnings</h2>
+              <div id="nav-scroll" class="my-2 max-h-[150px] overflow-auto">
+                <div class="my-3">
+                  <a
+                    class="flex items-center p-2 gap-2 rounded-full text-lg font-medium hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    href=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3"
+                      />
+                    </svg>
+                    <span> Wallet</span>
+                  </a>
+                </div>
+                <div class="my-3">
+                  <a
+                    class="flex items-center gap-2 p-2 rounded-full text-lg font-medium hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    href=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 12 3.269 3.126A59.768 59.768 0 0 1 21.485 12 59.77 59.77 0 0 1 3.27 20.876L5.999 12zm0 0h7.5"
+                      />
+                    </svg>
+                    <span>My Collections</span>
+                  </a>
+                </div>
+                <div class="my-3">
+                  <a
+                    class="flex items-center gap-2 p-2 rounded-full text-lg font-medium hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    href=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="w-6 h-6"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                      />
+                    </svg>
+                    <span>Settings</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-5 p-3">
+            <a
+              class="flex items-center justify-center p-2 gap-2 rounded-full text-lg font-medium bg-slate-100 hover:bg-slate-200"
+              href=""
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+                />
+              </svg>
+              <span>Logout</span>
+            </a>
+          </div>
+        </nav>
+
+        <div id="middle-grid" class="grid gap-5 overflow-auto p-2">
+          <div
+            class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 mt-5 rounded-xl flex gap-5 justify-between flex-wrap"
+          >
+            <div class="p-4 px-8 flex flex-col gap-4 items-start">
+              <h1 class="text-white text-3xl font-semibold">
+                Discover, Collect, Sell <br />
+                and Create your own NFT
+              </h1>
+              <button
+                class="p-2 px-4 text-white text-lg font-small hover:bg-indigo-300 bg-[#00000023] backdrop-blur-sm rounded-full"
+              >
+                Discover More
+              </button>
+            </div>
+            <div class="p-2">
+              <img
+                class="h-40 w-full"
+                src="./assets/images/NFT-PNG-Photos.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Trending Collections</h3>
+            <p class="text-gray-500 font-medium text-sm">See All</p>
+          </div>
+
+          <div
+            class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4"
+          >
+            <div class="bg-white relative p-2 pb-4 rounded-md">
+              <div class="absolute ml-2">
+                <button
+                  class="text-white text-sm bg-[#00000070] backdrop-blur-lg rounded-lg px-1"
+                >
+                  +823.70%
+                </button>
+              </div>
+
+              <!-- image -->
+
+              <div>
+                <img
+                  class="h-20 w-full object-cover rounded-md"
+                  src="./assets/images/NFT-avatar-PFP-gaming-projects.png"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="flex flex-col justify-center items-center gap-1 -mt-5"
+              >
+                <img
+                  class="w-11 h-11 rounded-full object-cover border border-black"
+                  src="./assets/images/download (1).jpeg"
+                  alt=""
+                />
+                <h3 class="font-semibold">KFC Club</h3>
+                <p class="text-xs">By StellaDuke</p>
+              </div>
+            </div>
+
+            <div class="bg-white relative p-2 rounded-md pb-4">
+              <div class="absolute ml-2">
+                <button
+                  class="text-white text-sm bg-[#00000070] backdrop-blur-lg rounded-lg px-1"
+                >
+                  +823.70%
+                </button>
+              </div>
+
+              <!-- image -->
+
+              <div>
+                <img
+                  class="h-20 w-full object-cover rounded-md"
+                  src="./assets/images/Picture2-15.png"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="flex flex-col justify-center items-center gap-1 -mt-5"
+              >
+                <img
+                  class="w-11 h-11 rounded-full object-cover border border-black"
+                  src="./assets/images/download (1).jpeg"
+                  alt=""
+                />
+                <h3 class="font-semibold">Logical Friends Power</h3>
+                <p class="text-xs">By HarryTour</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Top NFTs</h3>
+            <p class="text-gray-500 font-medium text-sm">See All</p>
+          </div>
+
+          <div
+            id="trending_collection_container"
+            class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4"
+          >
+            <div class="relative flex">
+              <div class="absolute right-0 mr-2 p-2 py-3">
+                <button
+                  class="text-white text-sm bg-[#00000070] backdrop-blur-lg rounded-full px-1"
+                >
+                  +823.70%
+                </button>
+              </div>
+              <div class="w-full bg-white rounded-lg p-2">
+                <div>
+                  <img
+                    class="h-40 w-full object-cover rounded-md"
+                    src="./assets/images/SXSW_WhatAreNFTs_cpt-1-640x360.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="p-2">
+                  <h3 class="font-semibold text-sm">
+                    White marble rotating head
+                  </h3>
+
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="w-6 h-6 rounded-full object-cover border border-black"
+                      src="./assets/images/download (1).jpeg"
+                      alt=""
+                    />
+                    <p class="text-sm">Jane</p>
+                  </div>
+
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-medium">Current Bal: 6.234ETH</p>
+                    <button
+                      class="px-2 py-[2px] bg-blue-500 rounded-full text-white"
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative flex">
+              <div class="absolute right-0 mr-2 p-2 py-3">
+                <button
+                  class="text-white text-sm bg-[#00000070] backdrop-blur-lg rounded-full px-1"
+                >
+                  +823.70%
+                </button>
+              </div>
+              <div class="w-full bg-white rounded-lg p-2">
+                <div>
+                  <img
+                    class="h-40 w-full object-cover rounded-md"
+                    src="./assets/images/NFT-avatar-PFP-gaming-projects.png"
+                    alt=""
+                  />
+                </div>
+                <div class="p-2">
+                  <h3 class="font-semibold text-sm">
+                    White marble rotating head
+                  </h3>
+
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="w-6 h-6 rounded-full object-cover border border-black"
+                      src="./assets/images/download (1).jpeg"
+                      alt=""
+                    />
+                    <p class="text-sm">Jane</p>
+                  </div>
+
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-medium">Current Bal: 6.234ETH</p>
+                    <button
+                      class="px-2 py-[2px] bg-blue-500 rounded-full text-white"
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-5 grid grid-rows-2 gap-2 items-start py-2 pr-3 h-fit overflow-auto"
+        >
+          <div class="bg-white p-2 rounded-lg">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold">Trending Collectors</h3>
+              <p class="text-gray-500 font-medium text-sm">See All</p>
+            </div>
+            <div class="flex items-center justify-between mt-5">
+              <div class="flex gap-2">
+                <div
+                  class="w-9 h-9 rounded-full bg-pink-300 flex items-center justify-center text-2xl"
+                >
+                  🧑
+                </div>
+                <div>
+                  <div class="flex relative">
+                    <div>
+                      <h2 class="font-small">Allexandra</h2>
+                      <p class="text-xs">@allexnft</p>
+                    </div>
+                    <div class="absolute right-0 top-[6px] -mr-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="#38a0f6"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        >
+                          <path
+                            d="M12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2 10 10 0 0 0 2 12a10 10 0 0 0 10 10Z"
+                          />
+                          <path d="m7.8 12 2.8 2.8 5.7-5.6" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  class="px-2 py-[2px] bg-blue-500 rounded-full text-white"
+                >
+                  Following
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-5">
+              <div class="flex gap-2">
+                <div
+                  class="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-2xl"
+                >
+                  👨‍⚕️
+                </div>
+                <div>
+                  <div class="flex relative">
+                    <div>
+                      <h2 class="font-small">Charity</h2>
+                      <p class="text-xs">@Chacha12</p>
+                    </div>
+                    <div class="absolute right-0 top-[6px] -mr-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="#38a0f6"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        >
+                          <path
+                            d="M12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2 10 10 0 0 0 2 12a10 10 0 0 0 10 10Z"
+                          />
+                          <path d="m7.8 12 2.8 2.8 5.7-5.6" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="px-3 py-[2px] bg-slate-100 rounded-full">
+                  Follow
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-5">
+              <div class="flex gap-2">
+                <div
+                  class="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center text-2xl"
+                >
+                  🧑
+                </div>
+                <div>
+                  <div class="flex relative">
+                    <div>
+                      <h2 class="font-small">Desmond</h2>
+                      <p class="text-xs">@desmondD</p>
+                    </div>
+                    <div class="absolute right-0 top-[6px] -mr-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="#38a0f6"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        >
+                          <path
+                            d="M12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2 10 10 0 0 0 2 12a10 10 0 0 0 10 10Z"
+                          />
+                          <path d="m7.8 12 2.8 2.8 5.7-5.6" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="px-3 py-[2px] bg-slate-100 rounded-full">
+                  Follow
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-5">
+              <div class="flex gap-2">
+                <div
+                  class="w-9 h-9 rounded-full bg-violet-200 flex items-center justify-center text-2xl"
+                >
+                  👨‍⚕️
+                </div>
+                <div>
+                  <div class="flex relative">
+                    <div>
+                      <h2 class="font-small">Chistabel</h2>
+                      <p class="text-xs">@Chistabella</p>
+                    </div>
+                    <div class="absolute right-0 top-[6px] -mr-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="#38a0f6"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        >
+                          <path
+                            d="M12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2 10 10 0 0 0 2 12a10 10 0 0 0 10 10Z"
+                          />
+                          <path d="m7.8 12 2.8 2.8 5.7-5.6" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="px-3 py-[2px] bg-slate-100 rounded-full">
+                  Follow
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-5">
+              <div class="flex gap-2">
+                <div
+                  class="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-2xl"
+                >
+                  👨‍⚕️
+                </div>
+                <div>
+                  <div class="flex relative">
+                    <div>
+                      <h2 class="font-small">Racheal</h2>
+                      <p class="text-xs">@Rachy</p>
+                    </div>
+                    <div class="absolute right-0 top-[6px] -mr-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="#38a0f6"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        >
+                          <path
+                            d="M12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2 10 10 0 0 0 2 12a10 10 0 0 0 10 10Z"
+                          />
+                          <path d="m7.8 12 2.8 2.8 5.7-5.6" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="px-3 py-[2px] bg-slate-100 rounded-full">
+                  Follow
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-2 rounded-lg">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold">Top Creators</h3>
+              <p class="text-gray-500 font-medium text-sm">See All</p>
+            </div>
+            <div class="flex items-center justify-between mt-3">
+              <div class="flex gap-2">
+                <div
+                  class="w-9 h-9 rounded-full bg-pink-300 flex items-center justify-center text-2xl"
+                >
+                  🧑
+                </div>
+                <div>
+                  <div class="flex relative">
+                    <div>
+                      <h2 class="font-small">Allexandra</h2>
+                      <p class="text-xs">@allexnft</p>
+                    </div>
+                    <div class="absolute right-0 top-[6px] -mr-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="#38a0f6"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        >
+                          <path
+                            d="M12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2 10 10 0 0 0 2 12a10 10 0 0 0 10 10Z"
+                          />
+                          <path d="m7.8 12 2.8 2.8 5.7-5.6" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button
+                  class="px-2 py-[2px] bg-blue-500 rounded-full text-white"
+                >
+                  Following
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
